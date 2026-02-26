@@ -7,5 +7,12 @@
   "prConcurrentLimit": 50,
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Ignore org.apache.axis2 packages (produced by this repo)",
+      "matchPackagePrefixes": ["org.apache.axis2"],
+      "enabled": false
+    }
   ]
 }
