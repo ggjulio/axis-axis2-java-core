@@ -22,7 +22,7 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"daa0526bfb55f55f24a1a18b38236ddc3ed8231dfb87e1dcb72edd2b39e12f84","compiler_version":"v0.50.5"}
+# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"58daf59e882db798047b1ad4ffbbb215152611ca2c894f90325bf9f6e4708568","compiler_version":"v0.50.5"}
 
 name: "AI-Assisted Upgrade"
 "on":

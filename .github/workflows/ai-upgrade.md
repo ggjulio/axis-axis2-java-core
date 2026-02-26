@@ -8,6 +8,14 @@ on:
 engine:
   id: copilot
   model: claude-opus-4.6
+  #  Maximum number of chat iterations per run,
+  #      Lower mean better control of budget per run BUT could lead to unfinished work on complex upgrades...
+  #   max-turns: 3 # TODO not supported by copilot, find an alternative.
+
+# Budget control: max-turns is not supported by the copilot engine.
+# Use timeout-minutes instead (default: 20). This caps wall-clock time for the agent step.
+# To further reduce cost, switch model to claude-sonnet-4 (cheaper, still capable).
+timeout-minutes: 20
 
 permissions:
   actions: read
@@ -80,6 +88,11 @@ The PR number is: ${{ github.event.issue.number }}
    - Fixing version compatibility issues in `pom.xml`.
 8. **Verify the build** by running: `mvn -B -e -Papache-release -Dgpg.skip=true -Dmaven.compiler.release=17 verify`
 9. If the build passes, commit the fix and push it to the PR branch.
+10. **Post a PR comment** summarizing what you did. The comment should include:
+    - A brief description of the root cause of the failure.
+    - A list of the files changed and why.
+    - The build verification result (pass/fail).
+    - Any caveats or follow-up items worth noting.
 
 ## Style
 
